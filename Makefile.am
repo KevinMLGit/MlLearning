@@ -18,7 +18,8 @@ bin_PROGRAMS = optimizer
 ## the C++ compiler to produce an object file (.o) from each source file. The
 ## header files (.h) do not result in object files by themselves, but will be
 ## included in distribution archives of the project.
-optimizer_SOURCES = src/optimizer.cc
+optimizer_SOURCES = src/optimizer.cc src/common/DataSet.hpp src/common/DataSet.cpp src/common/Samples.hpp
+AM_CXXFLAGS = -O0
                 
 
 ## Define an independent executable script for inclusion in the distribution
