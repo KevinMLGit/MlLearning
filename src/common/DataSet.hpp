@@ -3,16 +3,19 @@
 
 #include <vector>
 #include <string>
+#include <stdint.h>
 #include <utility>
+#include <stdio.h>
+#include "Sample.hpp"
 
-using namespace std;
 
 class DataSet {
     public:
-        vector<pair<uint32_t, float> >  features;
-        vector<Sample>                  samples;
+        std::vector<std::pair<uint32_t, float> >  features;
+        std::vector<Sample>                  samples;
     public:
-        bool parse(string sampleFileName);
+        DataSet() {printf("xdfds\n");}
+        bool parse(std::string sampleFileName);
 };
 
 #endif // __DATASET_H
